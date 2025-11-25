@@ -71,6 +71,9 @@ Smith et al. (1988). *Using the ADAP learning algorithm to forecast the onset of
    ```bash
    http://127.0.0.1:5000/
    ```
+4. It is also deployed on Render. Please follow this link for the same
+   
+   https://python-demo-isad.onrender.com/
    
 ## Notes / Limitations
 - Dataset contains zero values in medical fields (e.g., Glucose, BMI) that may represent missing data; this notebook does not impute them.
