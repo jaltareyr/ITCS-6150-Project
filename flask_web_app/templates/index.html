@@ -1,0 +1,61 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">Diabetes Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="text" name="pregnancies" class="form-control" value="{{ pregnancies }}" required>
+            </div>
+            <div class="form-group">
+                <label for="glucose">Glucose:</label>
+                <input type="text" name="glucose" value="{{ glucose }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="blood_pressure">Blood Pressure:</label>
+                <input type="text" name="blood_pressure" value="{{ blood_pressure }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="skin_thickness">Skin Thickness:</label>
+                <input type="text" name="skin_thickness" value="{{ skin_thickness }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin">Insulin:</label>
+                <input type="text" name="insulin" value="{{ insulin }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="text" name="bmi" value="{{ bmi }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="pedigree">Diabetes Pedigree Function:</label>
+                <input type="text" name="pedigree" value="{{ pedigree }}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" name="age" value="{{ age }}"  class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        <!-- <p>{{ knn_prediction }}</p>
+        <p>{{ logistic_regression_prediction }}</p>
+        <p>{{ rf_prediction }}</p> -->
+
+        {% if prediction_text  == "You are not at risk of diabetes." %}
+            <h3 class="text-center mt-5 bg-success">{{ prediction_text }}</h3>
+        {% else %}
+            <h3 class="text-center mt-5 bg-danger">{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
