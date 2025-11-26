@@ -184,19 +184,6 @@ def prepare_data_for_modeling(dataframe, target_column='Outcome', test_size=0.2,
 
 def evaluate_knn(X_train, y_train, X_test, y_test, max_k=20):
 
-    # Imagine a teacher grading students
-    # We’ve got a group of students (your KNN models), and each one tries a different strategy:
-    # Student 1 looks at 1 neighbor to make decisions.
-    # Student 2 looks at 2 neighbors.
-    # … all the way up to Student 20.
-    # Each student takes the test (predicts on our test data), and we give them a score (accuracy).
-
-    # Lineup the students: It creates models with different k values (number of neighbors).
-    # Test them one by one: Each model predicts the test answers, and we measure how many they got right.
-    # Keep track of scores: All the accuracy scores are stored neatly in a list.
-    # Draw a chart: It plots the scores so we can see which student (k value) did best.
-    # Announce the winner: Finally, it prints the best k — the one with the highest accuracy.
-
     """Evaluate KNN accuracy for k=1..max_k and return scores + best k."""
     k_values = range(1, max_k + 1)
     scores = [
