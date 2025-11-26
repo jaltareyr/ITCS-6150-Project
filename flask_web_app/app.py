@@ -8,10 +8,18 @@ Original file is located at
 
 # Final project
 
-- **Selected Scenario (Please fill in 'Healthcare' or 'Finance'):**
+Prepared By:::
 
-- **Name:**
-- **NinerID (8-number):**
+Chetan Kapadia: 801438508
+
+Sanjyot Sathe: 801426514
+
+Mohan Krishna Otikunta: 801418781
+
+Yashodhan Rajesh Jaltare: 801430080
+
+Ravi Kumar 801304869
+
 
 Dataset Reference:
 
